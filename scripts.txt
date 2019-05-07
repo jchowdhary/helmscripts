@@ -1,0 +1,13 @@
+## execute the shell..copy the below line to go inside the temp pod
+kubectl exec -it tempmicollabpod -- /bin/bash
+
+## copy the below cp commands to mount the volume
+cp -a /var/lib/pgsql/10/data/. /mnt/db
+cp -a /var/lib/ldap/. /mnt/ldap
+cp -a /var/log/awc/. /mnt/awclogs
+cp -a /var/log/e-smith/. /mnt/esmithlogs
+cp -a /home/e-smith/db/. /mnt/homeesmith
+cp -a /etc/e-smith/db/. /mnt/etc
+exit
+
+## end
